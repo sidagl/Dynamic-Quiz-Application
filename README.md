@@ -4,7 +4,7 @@ Made by: Siddharth Agarwal
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 This project is a **dynamic client-side quiz application** built using **HTML, CSS, and JavaScript**.  
 It includes advanced UI features and a fully automated **Selenium WebDriver test script**.
 
