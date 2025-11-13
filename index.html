@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Frugal Quiz — Dynamic Quiz App</title>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-card">
+      <div class="spinner"></div>
+      <h2>Frugal Quiz</h2>
+      <p>Preparing your personalized quiz...</p>
+    </div>
+  </div>
+
+  <div class="container" id="app" aria-hidden="true">
+    <header>
+      <div class="header-left">
+        <h1>Frugal Quiz</h1>
+        <p class="subtitle">Choose category & difficulty — timer per question</p>
+      </div>
+      <div class="header-right">
+        <label class="theme-toggle">
+          <input type="checkbox" id="themeToggle" />
+          <span>Dark</span>
+        </label>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="landing" class="card">
+        <h2>Start Quiz</h2>
+        <div class="controls">
+          <label>
+            Category:
+            <select id="categorySelect"></select>
+          </label>
+          <label>
+            Difficulty:
+            <select id="difficultySelect">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+        </div>
+        <button id="startBtn" class="btn">Start Quiz</button>
+      </section>
+
+      <section id="quizSection" class="card hidden">
+        <div class="quiz-header">
+          <div id="qIndex">Question 1 / 5</div>
+          <div class="timer-wrap">
+            <div id="timer">00:15</div>
+            <div id="progressBar" class="progress">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="questionContainer" class="question-container">
+          <div id="questionBox" class="question-box">
+            <div id="questionText"></div>
+            <ul id="optionsList" class="options-list" role="list"></ul>
+          </div>
+        </div>
+
+        <div class="nav">
+          <button id="prevBtn" class="btn secondary">Previous</button>
+          <button id="nextBtn" class="btn secondary">Next</button>
+          <button id="submitBtn" class="btn danger">Submit Quiz</button>
+        </div>
+      </section>
+
+      <section id="resultSection" class="card hidden">
+        <h2>Result Analysis</h2>
+        <p id="scoreText"></p>
+
+        <div class="result-grid">
+          <canvas id="answersChart" width="400" height="200"></canvas>
+          <canvas id="timeChart" width="400" height="200"></canvas>
+        </div>
+
+        <div id="breakdown"></div>
+
+        <button id="restartBtn" class="btn">Try Again</button>
+      </section>
+    </main>
+
+    <footer>
+      <small>Made by Siddharth Agarwal</small>
+    </footer>
+  </div>
+
+  <!-- Questions data -->
+  <script src="js/questions.js"></script>
+  <!-- Main script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
