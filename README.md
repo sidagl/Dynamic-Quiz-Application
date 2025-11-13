@@ -8,7 +8,7 @@ Made by: Siddharth Agarwal
 This project is a **dynamic client-side quiz application** built using **HTML, CSS, and JavaScript**.  
 It includes advanced UI features and a fully automated **Selenium WebDriver test script**.
 
-<a href="[https://example.com](https://sidagl.github.io/Dynamic-Quiz-Application/)" target="_blank">Click me</a>
+<a href="https://example.com](https://sidagl.github.io/Dynamic-Quiz-Application/" ></a>
 
 ### Features Included
 - Dynamic question loading  
